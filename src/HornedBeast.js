@@ -1,6 +1,6 @@
 //1. start by creating a class component. Always start by importing React.
 import React from 'react';
-import './HornedBeast.css';
+//import './HornedBeast.css'; 
 import{Card} from 'react-bootstrap';
 import{Button} from 'react-bootstrap';
 //2. Declare the Class Component.
@@ -15,25 +15,44 @@ class HornedBeast extends React.Component
     }
     myFav = () => {
         this.setState({
-        favorites : this.state.favorites + 1
+        favorites : this.state.favorites + 1 //cant chane with 
         });
     }
+    cardStyle = {
+        border: '2px solid black'
+    }
+    imgStyle = 
+    {
+        width: '100%',
+        height:'100%'
+    }
+    hoveringButton =
+    {
+        width: '.2rem .1vw',
+        cursor: 'pointer'
+    }
+
+
     render()
     {
         return(
             <>
-            <Card.Img class="image" variant = "top" alt={this.props.title} src={this.props.image_url}/>
-            <Card.Body>
-                <Card.Title>{this.props.title}</Card.Title>
-                <Card.Text> {this.state.favorites}</Card.Text>
-                <Card.Text>{this.props.description}</Card.Text>
-                <Button
-                variant="primary"
-                className='glow-on-hover'
-                onClick={this.myFav}>
-                </Button>
-            </Card.Body>
+            <Card className = "card" style={this.cardStyle}>
+                <Card.Img class={this.imgStyle} variant = "top" alt={this.props.title} src={this.props.image_url}/>
+                <Card.Body>
+                    <Card.Title>{this.props.title}</Card.Title>
+                    <Card.Text> {this.state.favorites}</Card.Text>
+                    <Card.Text>{this.props.description}</Card.Text>
+                    <Button
+                    variant="primary"
+                    className={this.hoveringButton}//this is for css
+                    //NOTE EVENT Handler onClick...
+                    onClick={this.myFav}> 
+                    Favorite Me</Button>
+                </Card.Body>
+            </Card>
             </>
+                //<Button/>
         );
     }
 }

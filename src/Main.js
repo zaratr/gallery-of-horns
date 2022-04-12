@@ -1,8 +1,16 @@
+import { findByLabelText } from "@testing-library/react";
 import React from "react";
 import HornedBeast from "./HornedBeast";
+import "./Main.css"
 
 class Main extends React.Component
 {
+    mainStyle = 
+    {
+        display: 'flex',
+        //justifyContent: 'space-evenly',
+        flexWrap: 'wrap'
+    }   
     render()
     {
         let beasts = [];
@@ -19,7 +27,7 @@ class Main extends React.Component
                 )
         });
         return (
-            <main>{beasts}</main>
+            <main style={this.mainStyle}>{beasts}</main>
         );
     }
 }
