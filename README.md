@@ -68,3 +68,35 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Gallery-Of-Horns
+
+Number and name of feature: Gallery-of-Horns images for user to browse the images in client program.
+
+Estimate of time needed to complete: 60
+
+Start time: 1600
+
+Finish time: 1800
+
+Actual time needed to complete: roughly an hour needed to complete assignment.
+
+Number and name of feature: adding a favrites category to display on the image.
+Estimate of time needed to complete: 60
+
+Start time: 1600
+
+Finish time: 1800
+
+Actual time needed to complete: roughly an hour needed to complete assignment.
+
+Number and name of feature: third feature, adding bootstrap for better visual applications. 
+
+Estimate of time needed to complete: 60
+
+Start time: 1600
+
+Finish time: 1800
+
+Actual time needed to complete: roughly an hour needed to complete assignment.

@@ -5,12 +5,21 @@ class Main extends React.Component
 {
     render()
     {
+        let beasts = [];
+        this.props.data.forEach((animal, index) =>{
+                beasts.push(
+                <HornedBeast 
+                title={animal.title}
+                name={animal.name}
+                image_url={animal.image_url}
+                description={animal.description}
+                horns={animal.horns}
+                key={index}
+                />
+                )
+        });
         return (
-            <>
-                <HornedBeast title='TITLE1' imageUrl="URL" description='Animals with some horns 1'></HornedBeast>
-                <HornedBeast title='TITLE 2' imageUrl="URL 2" description='Animals with some horns 2'></HornedBeast>
-            </>
-
+            <main>{beasts}</main>
         );
     }
 }
