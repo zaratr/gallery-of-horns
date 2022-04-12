@@ -11,7 +11,7 @@ class Main extends React.Component
                 <HornedBeast 
                 title={animal.title}
                 name={animal.name}
-                image_url={animal.imageUrl}
+                image_url={animal.image_url}
                 description={animal.description}
                 horns={animal.horns}
                 key={index}
