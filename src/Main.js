@@ -13,9 +13,8 @@ class Main extends React.Component
     }   
     render()
     {
-        let beasts = [];
-        this.props.data.forEach((animal, index) =>{
-                beasts.push(
+        let beasts = this.props.data.map((animal, index) =>{
+            return (
                 <HornedBeast 
                 title={animal.title}
                 name={animal.name}
@@ -24,7 +23,7 @@ class Main extends React.Component
                 horns={animal.horns}
                 key={index}
                 />
-                )
+                );
         });
         return (
             <main style={this.mainStyle}>{beasts}</main>
