@@ -8,7 +8,7 @@ class Main extends React.Component
     mainStyle = 
     {
         display: 'flex',
-        //justifyContent: 'space-evenly',
+        justifyContent: 'space-evenly',
         flexWrap: 'wrap'
     }   
     render()
