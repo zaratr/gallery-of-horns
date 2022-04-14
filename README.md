@@ -54,3 +54,17 @@ Estimate of time needed to complete: 60
 
 - Actual time needed to complete: roughly an hour needed to complete assignment.
   ****
+
+
+- Number and name of feature: Feature 1 - Filter by Numbers of Horns 
+- ****
+- User wants to filter by number of horns
+
+-Estimate of time needed to complete: 60
+
+- Start time: 1500
+
+- Finish time: 1600
+
+- Actual time needed to complete: roughly an hour needed to complete assignment.
+ 

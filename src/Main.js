@@ -50,7 +50,7 @@ class Main extends React.Component
                 <main style={this.mainStyle}>
                     <SelectedBeast
                     showModal={this.state.showModal}
-                    hideModal={this.state.hideModal}
+                    hideModal={this.hideModal}
                     image_url={this.state.image_url}
                     description={this.state.description}
                     title={this.state.title}
@@ -67,7 +67,7 @@ class Main extends React.Component
                                     horns={animal.horns}
                                     key={index}
                                     openModal={this.openModal}
-                                    //TODO: check here if not working correctly
+                                    animal={animal}
                                     />
                                 </Col>
                             ))}
