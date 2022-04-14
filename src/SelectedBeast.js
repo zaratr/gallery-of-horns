@@ -12,7 +12,6 @@ class SelectedBeast extends React.Component
         >
             <Modal.Header closeButton>
                 <Modal.Title>{this.props.title}</Modal.Title>
-                //TODO: may not need this
             </Modal.Header>
             <Modal.Body>
                 <img
