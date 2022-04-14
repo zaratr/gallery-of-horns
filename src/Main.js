@@ -1,9 +1,10 @@
 import { findByLabelText } from "@testing-library/react";
 import React from "react";
-import HornedBeast from "./HornedBeast";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from 'react-bootstrap/Container';
+
+import HornedBeast from "./HornedBeast";
 import SelectedBeast from './SelectedBeast';
 import "./Main.css";
 

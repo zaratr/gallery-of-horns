@@ -7,19 +7,19 @@ import data from './data.json';
 
 class App extends React.Component
 {
-  constructor(props)//constructor constructs functionality in the code and props gives you the access to the parent. 
+  //constructor(props)//constructor constructs functionality in the code and props gives you the access to the parent. 
   //both are needed and pass to the super in the hierarchy
-  {
-    super(props)
-    this.state =
-    {
+  //{
+    //super(props)
+    //this.state =
+    //{
       //beast: {}
       //beast: '',
       //image_url: '',
       //description: '',
       //title: ''
-    }
-  }
+    //}
+  //}
   
   render(){
     return (
