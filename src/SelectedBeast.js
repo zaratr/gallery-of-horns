@@ -11,16 +11,17 @@ class SelectedBeast extends React.Component
         onHide={this.props.hideModal}
         >
             <Modal.Header closeButton>
-                <Modal.Title>{this.props.beast.title}</Modal.Title>
+                <Modal.Title>{this.props.title}</Modal.Title>
+                //TODO: may not need this
             </Modal.Header>
             <Modal.Body>
                 <img
                 style={{width: '100%'}}
-                src={this.props.beast.image_url}
-                alt={this.props.beast.title}
+                src={this.props.image_url}
+                alt={this.props.title}
                 >
                 </img>
-                {this.props.beast.description}
+                {this.props.description}
             </Modal.Body>
         </Modal>
         );

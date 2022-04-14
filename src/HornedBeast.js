@@ -15,9 +15,20 @@ class HornedBeast extends React.Component
     }
     myFav = () => {
         this.setState({
-        favorites : this.state.favorites + 1 //cant chane with 
+        favorites : this.state.favorites + 1 //cant chane with ++1 inside the inline tag
         });
     }
+    handleClick = () =>{
+        this.myFav();
+        //this.props.openModal(this.props.beast);
+        this.props.openModal(this.props.title, this.props.description,this.props.image_url);
+    }
+
+    /*handleShowModal = () =>
+    {
+    }
+    */
+
     cardStyle = {
         border: '2px solid black'
     }
@@ -37,8 +48,17 @@ class HornedBeast extends React.Component
     {
         return(
             <>
-            <Card className = "card" style={this.cardStyle}>
-                <Card.Img class={this.imgStyle} variant = "top" alt={this.props.title} src={this.props.image_url}/>
+            <Card 
+            style={this.cardStyle}>
+                <Card.Img 
+                className={this.imgStyle} 
+                variant = "top"
+                alt={this.props.title} 
+                src={this.props.image_url}
+                onClick={this.handleClick}//needs onclick to handle
+                //onClick={this.handleShowModal}
+                />
+
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
                     <Card.Text> {this.state.favorites}</Card.Text>

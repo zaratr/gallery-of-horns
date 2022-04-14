@@ -14,10 +14,29 @@ class Main extends React.Component
         super(props);//uses this to pass the values. if super() will make all undefined but they exist.
         // Must use super(props) to gain the values
         this.state = {
-            data: this.props.data
+            showModal: false,
+            //data: this.props.data,
+            image_url: '',
+            description: '',
+            title: ''
         };
-
     }
+
+    hideModal = () => {
+        this.setState({
+            showModal: false
+        })
+    }
+    openModal = (title, description, image_url) =>
+    {
+        this.setState({
+        showModal: true,
+        image_url: image_url,
+        description: description,
+        title: title
+        });
+    }
+
     mainStyle = 
     {
         display: 'flex',
@@ -29,13 +48,15 @@ class Main extends React.Component
             return (
                 <main style={this.mainStyle}>
                     <SelectedBeast
-                    showModal={this.props.showModal}
-                    beast={this.props.beast}
-                    hideModal={this.props.hideModal}
+                    showModal={this.state.showModal}
+                    hideModal={this.state.hideModal}
+                    image_url={this.state.image_url}
+                    description={this.state.description}
+                    title={this.state.title}
                     />
                     <Container>
                         <Row xs={1} md={3} lg={4}>
-                            {this.state.data.map((animal, index) =>(
+                            {this.props.data.map((animal, index) =>(
                                 <Col key={index}>
                                     <HornedBeast 
                                     title={animal.title}
@@ -44,7 +65,8 @@ class Main extends React.Component
                                     description={animal.description}
                                     horns={animal.horns}
                                     key={index}
-                                    openModal={this.props.openModal}
+                                    openModal={this.openModal}
+                                    //TODO: check here if not working correctly
                                     />
                                 </Col>
                             ))}

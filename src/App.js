@@ -13,32 +13,24 @@ class App extends React.Component
     super(props)
     this.state =
     {
-      showModal: false,
-      beast: {}
+      //beast: {}
+      //beast: '',
+      //image_url: '',
+      //description: '',
+      //title: ''
     }
   }
-  hideModal = () => {
-    this.setState({
-        showModal: false
-    })
-  }
-  openModal = (beast) =>
-  {
-    this.setState({
-      showModal: true
-    })
-  }
-
+  
   render(){
     return (
       <>
       <Header/>
       <Main 
       data = {data}
-      openModal={this.openModal}
-      hideModal={this.hideModal}
-      beast={this.state.beast}
-      showModal={this.state.showModal}
+      //openModal={this.openModal}
+      //hideModal={this.hideModal}
+      //beast={this.state.beast}//empty object
+      //showModal={this.state.showModal}
       />
       <Footer/>
       </>
